@@ -9,14 +9,14 @@ Usage
 
 As a stand-alone pool:
 
-    {ObjectPool} = require 'pooled'
+    {ObjectPool} = require 'pools'
     pool = new ObjectPool(MyClass)
     x = pool.alloc(...) # use the same arguments as in 'new MyClass(...)'
     pool.free(x) # the corpse of x will be re-animated by alloc()
 
 As a class decorator (my preferred method):
 
-    {Pooled} = require 'pooled'
+    {Pooled} = require 'pools'
     Pooled class MyClass
         constructor: (junk) ->
     x = MyClass.alloc(...)
@@ -24,7 +24,7 @@ As a class decorator (my preferred method):
 
 If a class has a `destructor` method, it is called from inside `free()`.
 
-    {Pooled} = require 'pooled'
+    {Pooled} = require 'pools'
     Pooled class Test
         constructor: -> @status = 'inuse'
         destructor:  -> @status = 'free'
