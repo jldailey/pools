@@ -1,11 +1,11 @@
 {
   "name": "pooled",
   "version": "1.0.0",
-  "description": "An Object Pool, for when you want to be garbage-free.",
+  "description": "An Object Pool; reduce, reuse, recycle.",
   "main": "lib/objectpool.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Jesse Dailey <jesse_dailey@fastmail.com>",
+  "license": "MIT"
 }
