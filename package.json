@@ -1,7 +1,7 @@
 {
-  "name": "pooled",
+  "name": "pools",
   "version": "1.0.0",
-  "description": "An Object Pool; reduce, reuse, recycle.",
+  "description": "Object Pools; reduce, reuse, recycle.",
   "main": "lib/objectpool.js",
   "scripts": {
     "test": "make test"
