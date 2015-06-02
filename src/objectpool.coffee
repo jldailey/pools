@@ -1,3 +1,4 @@
+#define DEBUG
 
 ### Object Pool: Allocate and re-use objects so they never cause GC pauses. ###
 
@@ -43,6 +44,8 @@ class ObjectPool
 		else ret = new @klass arguments...
 		ret
 	free: (item) ->
+		return unless item?
+		item.destructor?()
 		@pool.push item
 	toString: -> "{ObjectPool[#{@klass.name}] #{@pool.length}/#{@pool.peak}}"
 
